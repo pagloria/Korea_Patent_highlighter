@@ -32,7 +32,8 @@ ubuntu: sudo apt-get install python-tk
 
 ## Precautions
 실행시 주의사항: 번역기능은 PAPAGO API를 사용하므로 API키를 발급받으셔야 합니다.
-번역기능 이용 X: TextRank_Korea_summarization_GUI.py
-번역기능 이용: TextRank_Korea_summarization_GUI_Papago.py
+
+- 번역기능 이용 X: TextRank_Korea_summarization_GUI.py
+- 번역기능 이용: TextRank_Korea_summarization_GUI_Papago.py
 
 num_summary 변수를 통하여 요약문장 개수 조절가능합니다.
