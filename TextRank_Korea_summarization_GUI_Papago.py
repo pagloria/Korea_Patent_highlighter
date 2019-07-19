@@ -34,7 +34,7 @@ class SentenceTokenizer(object):
     def __init__(self):
         self.kkma = Kkma()
         self.twitter = Twitter()
-        #2019.05.09 불용어 리스트 확장. --pcj--
+        
         self.stopwords =['이', '있', '하', '것', '들', '그', '되', '수', '이', '보', '않', '없', '나', '사람', '주', '아니', '등', '같', '우리', '때', '년', '가', '한', '지', '대하', '오', '말', '일', '그렇', '위하', '때문', '그것', '두', '말하', '알', '그러나', '받', '못하', '일', '그런', '또', '문제', '더', '사회', '많', '그리고', '좋', '크', '따르', '중', '나오', '가지', '씨', '시키', '만들', '지금', '생각하', '그러', '속', '하나', '집', '살', '모르', '적', '월', '데', '자신', '안', '어떤', '내', '내', '경우', '명', '생각', '시간', '그녀', '다시', '이런', '앞', '보이', '번', '나', '다른', '어떻', '여자', '개', '전', '들', '사실', '이렇', '점', '싶', '말', '정도', '좀', '원', '잘', '통하', '소리', '놓']
     
     def url2sentences(self, url):
@@ -156,12 +156,11 @@ class TextRank(object):
 
 
 
-# 결과 확인
-# 파이선 GUI tkinter 이용
+
 from tkinter import *
 from tkinter.ttk import *
 
-#파일 쓰기기능 추가(2019.05.09)
+#파일 쓰기기능 
 import datetime
 import os
 
@@ -179,26 +178,9 @@ except OSError as e:
         raise
 
 
-#이곳은 TTS 음성을 생성해주는 곳
-import requests
-from requests import get  # to make GET request
-
-def download(url, file_name):
-    # open in binary mode
-    with open(file_name, "wb") as file:
-        # get request
-        response = get(url)
-        # write to file
-        if response.status_code == 200:
-            file.write(response.content)
-            print("TTS의 생성이 완료되었습니다")
-        else:
-            print(file_name) #오류임 !!
-            print("TTS가 생성되지 않았습니다")
 
 #tts_name=str(dt.hour)+"_"+str(dt.minute)+"_"+str(dt.second)+"_"+"result_summarize.wav"#파일이름은 시간,분,초 + result_summarize의 조합으로 생성한다. (중복안되게)
 
-#이곳은 TTS 음성을 생성해주는 곳
 
 
 class MyFrame(Frame):            
