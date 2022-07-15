@@ -1,4 +1,3 @@
-newspaper3k
 sklearn
 konlpy
 numpy
